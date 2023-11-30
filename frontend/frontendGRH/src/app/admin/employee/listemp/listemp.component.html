@@ -1,0 +1,57 @@
+<div class="container">
+
+    <div class="row mt-5" style="display: flex;justify-content: space-between;">
+        <h2 class="col-4"> Liste d'employée </h2>
+        <button class="btn btn-dark col-2"routerLink="/admin/employee/ajout" >Create</button>
+</div>
+
+        <div class="row mt-4">
+
+            <table class="table">
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>image</th>
+                        <th>name</th>
+                        <th>lastname</th>
+                        <th>email</th>
+                        <th>tel</th>
+                        <th>address</th>
+                        <th>departement</th>
+                        <th>options</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let item of employee, let i = index">
+                        <td> {{ i + 1 }}</td>
+                        <td>
+                            <img style="width:50px;" [src]="'http://127.0.0.1.3000/getimage/' + item.image" alt="">
+                        </td>
+
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.lastname }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>{{ item.tel }}</td>
+                        <td>{{ item.address }}</td>
+                        <td>{{ item.departement[0].name + ',' + item.departement[0].etage + ',' + item.departement[0].salle  }}</td>
+                  
+                        <td>
+                            <button (click)="delete(item._id)" class="btn btn-outline-danger">Delete</button>
+
+                            <button [routerLink]="[ '/admin/emplyee/update', item.id ]" class="btn btn-outline-primary">Update</button>
+                        </td>
+
+                    </tr>
+                    
+                </tbody>
+
+
+            </table>
+
+
+    </div>
+</div>

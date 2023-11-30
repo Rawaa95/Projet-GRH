@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-6 mx-auto mt-5">
+
+            <h2> Update departement </h2>
+
+            <input [(ngModel)]="departement.name" type="text" class="form-control m-2" placeholder="name">
+
+            <input [(ngModel)]="departement.etage" type="text" class="form-control m-2" placeholder="etage">
+
+            <input  [(ngModel)]="departement.salle" type="text" class="form-control m-2" placeholder="salle">
+
+            <textarea [(ngModel)]="departement.description" class="form-control m-2" cols="30" rows="3" placeholder="description"></textarea>
+
+            <button (click)="save()"class="btn btn-primary form-control m-2">Save</button>
+
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-6 mx-auto mt-5">
+
+            <h2>Create new departement </h2>
+
+            <input [(ngModel)]="dep.name" type="text" class="form-control m-2" placeholder="name">
+
+            <input [(ngModel)]="dep.etage"  type="text" class="form-control m-2" placeholder="etage">
+
+            <input [(ngModel)]="dep.salle"  type="text" class="form-control m-2" placeholder="salle">
+
+            <textarea [(ngModel)]="dep.description"  class="form-control m-2" cols="30" rows="3" placeholder="description"></textarea>
+
+            <button  (click)="ajout()" class="btn btn-primary form-control m-2">create</button>
+
+        </div>
+    </div>
+
+</div>
